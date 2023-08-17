@@ -2,7 +2,6 @@
 
 
 ## View the app
-Visit http://localhost:8501/ to view the app
 
 ![img.png](img.png)
 
@@ -23,6 +22,8 @@ Then run the following command
 ```bash
 docker-compose up -d
 ```
+
+Visit http://localhost:8501/ to view the app
 
 ## Installation
 
@@ -53,5 +54,7 @@ Afterwards, run the streamlit app
 ```bash
 poetry run streamlit run streamlit_app.py
 ```
+
+Visit http://localhost:8501/ to view the app
 
 
