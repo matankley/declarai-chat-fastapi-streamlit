@@ -9,7 +9,16 @@ Visit http://localhost:8501/ to view the app
 
 ## Run with Docker
 
-You can also run the app with docker-compose
+You can run the app with docker-compose.
+
+This demo is using openai gpt-3.5 mode so make sure to add your openai token to **.env** file.
+
+Go to .env file and add your openai token
+```bash
+DECLARAI_OPENAI_API_KEY = <your openai key> ###ENTER YOUR OPENAI KEY HERE
+```
+
+Then run the following command
 
 ```bash
 docker-compose up -d
@@ -17,10 +26,12 @@ docker-compose up -d
 
 ## Installation
 
+If you prefer to run the app locally, you can install the dependencies with poetry
+
 ```bash
 poetry install
 ```
-or 
+or with pip
 
 ```bash
 pip install -r requirements.txt
