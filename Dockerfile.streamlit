@@ -1,0 +1,18 @@
+FROM python:3.9 as build
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y git
+
+# Install Poetry
+RUN pip install poetry==1.2.2
+
+
+COPY ./pyproject.toml ./poetry.lock /app/
+RUN poetry export --without-hashes --format requirements.txt > requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY ./streamlit_app.py /app/
+RUN pip install streamlit
+CMD ["streamlit", "run", "streamlit_app.py", "--server.port", "8501"]

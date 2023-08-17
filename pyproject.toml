@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "declarai_chat_fastapi_streamlit"}]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.9.7 "
+python = ">3.9.7,<4.0.0"
 fastapi = "^0.101.1"
 streamlit = "^1.25.0"
 declarai = "^0.1.6"

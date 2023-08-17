@@ -2,7 +2,7 @@ import sys
 
 from fastapi import FastAPI, APIRouter
 
-from chat import SQLChat
+from .chat import SQLChat
 from declarai.memory import FileMessageHistory
 
 app = FastAPI(title="Hey")
