@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "declarai-chat-fastapi-streamlit"
+version = "0.1.0"
+description = ""
+authors = ["matankleyman <matan.kley@gmail.com>"]
+readme = "README.md"
+packages = [{include = "declarai_chat_fastapi_streamlit"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 "
+fastapi = "^0.101.1"
+streamlit = "^1.25.0"
+declarai = "^0.1.6"
+uvicorn = "^0.23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
