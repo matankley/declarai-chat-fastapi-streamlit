@@ -1,5 +1,20 @@
 # declarai-chat-fastapi-streamlit
 
+
+## View the app
+Visit http://localhost:8501/ to view the app
+
+![img.png](img.png)
+
+
+## Run with Docker
+
+You can also run the app with docker-compose
+
+```bash
+docker-compose up -d
+```
+
 ## Installation
 
 ```bash
@@ -28,17 +43,4 @@ Afterwards, run the streamlit app
 poetry run streamlit run streamlit_app.py
 ```
 
-
-## Run with Docker
-
-You can also run the app with docker-compose
-
-```bash
-docker-compose up -d
-```
-
-## View the app
-Visit http://localhost:8501/ to view the app
-
-![img.png](img.png)
 
