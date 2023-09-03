@@ -339,13 +339,13 @@ files = [
 
 [[package]]
 name = "declarai"
-version = "0.1.6"
+version = "0.1.10"
 description = "Declarai, turning Python code into LLM tasks, easy to use, and production-ready."
 optional = false
-python-versions = ">=3.7.1,<4.0.0"
+python-versions = ">=3.8,<4.0"
 files = [
-    {file = "declarai-0.1.6-py3-none-any.whl", hash = "sha256:2a8f3b50b51e70d6ea16b28751fdf0eec6d3e18655e2ede0353bb9d873ebe9e3"},
-    {file = "declarai-0.1.6.tar.gz", hash = "sha256:4217404c0a858c195b56dcf69eec212a87327223038bdf1dc4bd824fafb8c607"},
+    {file = "declarai-0.1.10-py3-none-any.whl", hash = "sha256:6b2a8ebb104ba534a7f002f48084ab3c6dbc340ba1ebb83be4d5a4d05468a48c"},
+    {file = "declarai-0.1.10.tar.gz", hash = "sha256:cb73f1f094c3ba8909c6fad5ecca68b8628989ccafa5a7a5c4f89127c0f09088"},
 ]
 
 [package.dependencies]
@@ -1743,4 +1743,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">3.9.7,<4.0.0"
-content-hash = "a0803247041c6a9c9ef884b7fa3a33462ec243301c864711ffeea9b6dfc6116e"
+content-hash = "2035bf03930cce44c215d403c005e5931e79a03bdd29108ea764d05a3396066c"

@@ -1,13 +1,13 @@
-import sys
+import json
 
 from fastapi import FastAPI, APIRouter
-
-from .chat import SQLChat
+from fastapi.responses import StreamingResponse
+from fastapi.encoders import jsonable_encoder
+from app.chat import SQLChat, StreamingSQLChat
 from declarai.memory import FileMessageHistory
 
 app = FastAPI(title="Hey")
 router = APIRouter()
-
 
 
 @router.post("/chat/submit/{chat_id}")
@@ -15,6 +15,20 @@ def submit_chat(chat_id: str, request: str):
     chat = SQLChat(chat_history=FileMessageHistory(file_path=chat_id))
     response = chat.send(request)
     return response
+
+
+@router.post("/chat/submit/{chat_id}/streaming")
+def submit_chat_streaming(chat_id: str, request: str):
+    chat = StreamingSQLChat(chat_history=FileMessageHistory(file_path=chat_id))
+    response = chat.send(request)
+
+    def stream():
+        for llm_response in response:
+            # Convert the LLMResponse to a JSON string
+            data = json.dumps(jsonable_encoder(llm_response))
+            yield data + "\n"  # Yielding as newline-separated JSON strings
+
+    return StreamingResponse(stream(), media_type="text/event-stream")
 
 
 @router.get("/chat/history/{chat_id}")
