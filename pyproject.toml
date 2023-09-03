@@ -10,7 +10,7 @@ packages = [{include = "declarai_chat_fastapi_streamlit"}]
 python = ">3.9.7,<4.0.0"
 fastapi = "^0.101.1"
 streamlit = "^1.25.0"
-declarai = "^0.1.6"
+declarai = "^0.1.10"
 uvicorn = "^0.23.2"
 
 

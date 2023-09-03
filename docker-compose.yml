@@ -14,5 +14,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.streamlit
+    environment:
+      - BACKEND_URL=http://fastapi-server:8000
     ports:
       - "8501:8501"
